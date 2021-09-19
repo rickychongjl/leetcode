@@ -1,0 +1,23 @@
+// https://leetcode.com/problems/move-zeroes/submissions/
+function moveZeroes(arr){
+    var count = arr.length;
+    if(count == 0 || count == 1){
+        return;
+    }
+    let left = 0;
+    let right = 0;
+    let temp;
+    while(right<count){
+        if(arr[right] == 0){
+            right++;
+        }else{
+            temp = arr[right];
+            arr[right] = arr[left];
+            arr[left] = temp;
+            left++;
+            right++;
+        }
+    }
+    return arr;
+}
+moveZeroes([0,1,0,3,12]);
