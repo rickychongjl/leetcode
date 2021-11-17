@@ -1,5 +1,5 @@
-
-int findContentChildren(vector<int>& g, vector<int>& s) {
+#include <vector>
+int findContentChildren(std::vector<int>& g, std::vector<int>& s) {
      // In the remaining children, give the child with the least greed factor a cookie 
      // with the smallest size among those that can content the child
     sort(g.begin(), g.end());
