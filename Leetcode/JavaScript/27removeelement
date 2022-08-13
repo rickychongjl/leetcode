@@ -1,0 +1,18 @@
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function(nums, val) {
+    let counter = 0;
+    for(var i = 0; i<nums.length; i++){
+        if (nums[i] == val){
+            nums[i] = -1;
+            counter++;
+        }
+    }
+    nums.sort((a, b) => b - a);
+    return nums.length - counter;
+};
+
+console.log(removeElement([3, 2, 2, 3], 3));
