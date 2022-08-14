@@ -1,0 +1,9 @@
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var mySqrt = function(x) {
+    let ret  = Math.sqrt(x);
+    return Math.floor(ret);
+};
+console.log(mySqrt('64'));
